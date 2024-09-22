@@ -30,17 +30,17 @@ class AutorController extends Controller
     {
         $autor = new Autor();
 
-        $autor->nome = $request->titulo;
-        $autor->ano_nascimento = $request->ano_lancamento;
-        $autor->sexo = $request->fk_autor;
-        $autor->nacionalidade = $request->fk_editora;
+        $autor->nome = $request->nome;
+        $autor->ano_nascimento = $request->ano_nascimento;
+        $autor->sexo = $request->sexo;
+        $autor->nacionalidade = $request->nacionalidade;
 
         $autor->save();
     }
 
     public function edit($id) 
     {
-        $autor = Autor::with(['autores', 'editoras', 'generos'])->find($id);
+        $autor = Autor::find($id);
 
         return response()->json([
             'autor' => $autor
@@ -51,10 +51,10 @@ class AutorController extends Controller
     {
         $autor = Autor::find($id);
 
-        $autor->nome = $request->titulo;
-        $autor->ano_nascimento = $request->ano_lancamento;
-        $autor->sexo = $request->fk_autor;
-        $autor->nacionalidade = $request->fk_editora;
+        $autor->nome = $request->nome;
+        $autor->ano_nascimento = $request->ano_nascimento;
+        $autor->sexo = $request->sexo;
+        $autor->nacionalidade = $request->nacionalidade;
 
         $autor->save();
     }

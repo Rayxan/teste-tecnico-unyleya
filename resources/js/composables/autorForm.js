@@ -4,11 +4,10 @@ import axios from 'axios';
 
 export function useAutorForm() {
     const form = reactive({
-        titulo: "",
-        ano_lancamento: "",
-        fk_autor: "",
-        fk_editora: "",
-        fk_genero: "",
+        nome: "",
+        ano_nascimento: "",
+        sexo: "",
+        nacionalidade: "",
     });
 
     const router = useRouter();
@@ -26,11 +25,10 @@ export function useAutorForm() {
 
     const getAutor = async () => {
         let response = await axios.get(`/autores/${route.params.id}/edit`);
-        form.titulo = response.data.autor.titulo;
-        form.ano_lancamento = response.data.autor.ano_lancamento;
-        form.fk_autor = response.data.autor.fk_autor;
-        form.fk_editora = response.data.autor.fk_editora;
-        form.fk_genero = response.data.autor.fk_genero;
+        form.nome = response.data.autor.nome;
+        form.ano_nascimento = response.data.autor.ano_nascimento;
+        form.sexo = response.data.autor.sexo;
+        form.nacionalidade = response.data.autor.nacionalidade;
     };
 
     const handleSave = (values, actions) => {

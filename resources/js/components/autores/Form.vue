@@ -19,9 +19,9 @@
         <div class="livros__create__cardWrapper mt-2">
             <div class="livros__create__main">
                 <div class="livros__create__main--addInfo card py-2 px-2 bg-white">
-                    <p class="mb-1">Título</p>
-                    <input type="text" class="input" v-model="form.titulo" >
-                    <small style="color:red" v-if="errors.titulo">{{ errors.titulo }}</small>
+                    <p class="mb-1">Nome</p>
+                    <input type="text" class="input" v-model="form.nome" >
+                    <small style="color:red" v-if="errors.nome">{{ errors.nome }}</small>
 
                     <p class="my-1">Ano Lancamento</p>
                     <textarea cols="10" rows="5" class="textarea" v-model="form.ano_lancamento" ></textarea>
@@ -59,12 +59,12 @@
 </template>
 
 <script setup>
-    import { useLivroForm } from "@/composables/livroForm";
+    import { useAutorForm } from "@/composables/autorForm";
 
     const {
         form,
         errors,
         editMode,
         handleSave
-    } = useLivroForm();
+    } = useAutorForm();
 </script>
