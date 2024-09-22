@@ -16,7 +16,8 @@ Route::put('/livros/update/{livro}', [LivroController::class, 'update']);
 Route::delete('/livro/{livro}', [LivroController::class, 'destroy']);
 
 Route::post('/autores', [AutorController::class, 'store']);
-Route::get('/autores', [AutorController::class, 'listAutores']);
+Route::get('/autores', [AutorController::class, 'index']);
+Route::get('/autores/list', [AutorController::class, 'listAutores']);
 Route::get('/autores/{autor}/edit', [AutorController::class, 'edit']);
 Route::put('/autores/update/{autor}', [AutorController::class, 'update']);
 Route::delete('/autor/{autor}', [AutorController::class, 'destroy']);

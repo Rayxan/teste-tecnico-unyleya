@@ -11,6 +11,8 @@ export function useLivroForm() {
         fk_genero: "",
     });
 
+    const autores = ref([]);
+
     const router = useRouter();
     const route = useRoute();
     
@@ -22,6 +24,7 @@ export function useLivroForm() {
             editMode.value = true;
             getLivro();
         }
+        getAutores(); 
     });
 
     const getLivro = async () => {
@@ -31,6 +34,11 @@ export function useLivroForm() {
         form.fk_autor = response.data.livro.fk_autor;
         form.fk_editora = response.data.livro.fk_editora;
         form.fk_genero = response.data.livro.fk_genero;
+    };
+
+    const getAutores = async () => {
+        let response = await axios.get('/autores/list');
+        autores.value = response.data.autores;
     };
 
     const handleSave = (values, actions) => {
@@ -69,6 +77,7 @@ export function useLivroForm() {
 
     return {
         form,
+        autores,
         errors,
         editMode,
         handleSave,

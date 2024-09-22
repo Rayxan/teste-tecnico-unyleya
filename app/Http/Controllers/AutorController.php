@@ -3,17 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreAutorRequest;
-use App\Http\Requests\StoreLivroRequest;
 use App\Models\Autor;
 use Illuminate\Http\Request;
 
 class AutorController extends Controller
 {
-    public function listAutores(Request $request)
+    public function index(Request $request)
     {
         $autores = Autor::query();
-
-        // dd($autores);
 
         if ($request->searchQuery != '') {
             $autores = $autores->where('nome', 'like', '%' . $request->searchQuery . '%');
@@ -21,6 +18,16 @@ class AutorController extends Controller
         
         $autores = $autores->latest()->paginate(2);
 
+        return response()->json([
+            'autores' => $autores
+        ], 200);
+    }
+
+    public function listAutores(Request $request)
+    {
+        $autores = Autor::query();
+
+        $autores = $autores->latest()->get(['id', 'nome']);
         return response()->json([
             'autores' => $autores
         ], 200);

@@ -33,7 +33,12 @@
                 <div class="card py-2 px-2 bg-white">                    
                     <div class="my-3">
                         <p>Autor</p>
-                        <input type="text" class="input" v-model="form.fk_autor" >
+                        <select v-model="form.fk_autor" class="input">
+                            <option disabled value="">Selecione um autor</option>
+                            <option v-for="autor in autores" :key="autor.id" :value="autor.id">
+                                {{ autor.nome }}
+                            </option>
+                        </select>
                         <small style="color:red" v-if="errors.fk_autor">{{ errors.fk_autor }}</small>
                     </div>
                     <hr>
@@ -64,6 +69,7 @@
     const {
         form,
         errors,
+        autores,
         editMode,
         handleSave
     } = useLivroForm();
