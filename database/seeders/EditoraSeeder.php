@@ -15,8 +15,13 @@ class EditoraSeeder extends Seeder
     {
         $editoras = [
             ['nome' => 'Leya'],
+            ['nome' => 'HarperCollins'],
+            ['nome' => 'Rocco'],
+            ['nome' => 'Penguin Random House'],
+            ['nome' => 'Companhia das Letras'],
         ];
-        foreach ($editoras as $key => $editora) {
+
+        foreach ($editoras as $editora) {
             Editora::create($editora);
         }
     }

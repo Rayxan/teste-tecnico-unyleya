@@ -15,8 +15,13 @@ class GeneroSeeder extends Seeder
     {
         $generos = [
             ['nome' => 'Romance'],
+            ['nome' => 'Fantasia'],
+            ['nome' => 'Ficção Científica'],
+            ['nome' => 'Terror'],
+            ['nome' => 'Mistério'],
         ];
-        foreach ($generos as $key => $genero) {
+
+        foreach ($generos as $genero) {
             Genero::create($genero);
         }
     }
