@@ -21,3 +21,17 @@ Route::get('/autores/list', [AutorController::class, 'listAutores']);
 Route::get('/autores/{autor}/edit', [AutorController::class, 'edit']);
 Route::put('/autores/update/{autor}', [AutorController::class, 'update']);
 Route::delete('/autor/{autor}', [AutorController::class, 'destroy']);
+
+Route::post('/editoras', [EditoraController::class, 'store']);
+Route::get('/editoras', [EditoraController::class, 'index']);
+Route::get('/editoras/list', [EditoraController::class, 'listEditores']);
+Route::get('/editoras/{editor}/edit', [EditoraController::class, 'edit']);
+Route::put('/editoras/update/{editor}', [EditoraController::class, 'update']);
+Route::delete('/editor/{editor}', [EditoraController::class, 'destroy']);
+
+// Route::post('/generos', [GeneroController::class, 'store']);
+// Route::get('/generos', [GeneroController::class, 'index']);
+// Route::get('/generos/list', [GeneroController::class, 'listGeneros']);
+// Route::get('/generos/{genero}/edit', [GeneroController::class, 'edit']);
+// Route::put('/generos/update/{genero}', [GeneroController::class, 'update']);
+// Route::delete('/genero/{genero}', [GeneroController::class, 'destroy']);

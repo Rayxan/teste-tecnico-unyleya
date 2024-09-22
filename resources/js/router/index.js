@@ -1,9 +1,13 @@
 import {createRouter, createWebHistory} from "vue-router";
 
-import livroIndex from '../components/livros/Index.vue'
-import livroForm from '../components/livros/Form.vue'
-import autorIndex from '../components/autores/Index.vue'
-import autorForm from '../components/autores/Form.vue'
+import livroIndex from '../components/livros/LivroIndex.vue'
+import livroForm from '../components/livros/LivroForm.vue'
+import autorIndex from '../components/autores/AutorIndex.vue'
+import autorForm from '../components/autores/AutorForm.vue'
+// import editoraIndex from '../components/editoras/EditoraIndex.vue'
+// import editoraForm from '../components/editoras/EditoraForm.vue'
+// import generoIndex from '../components/generos/GeneroIndex.vue'
+// import generoForm from '../components/generos/GeneroForm.vue'
 
 import notFound from '../components/notFound.vue'
 
@@ -38,6 +42,36 @@ const routes = [
         name: 'autores.edit',
         component: autorForm
     },
+    // {
+    //     path:'/editoras',
+    //     name: 'editoras.index',
+    //     component: autorIndex
+    // },
+    // {
+    //     path:'/editoras/create',
+    //     name: 'editoras.create',
+    //     component: autorForm
+    // },
+    // {
+    //     path:'/editoras/:id/edit',
+    //     name: 'editoras.edit',
+    //     component: autorForm
+    // },
+    // {
+    //     path:'/generos',
+    //     name: 'editoras.index',
+    //     component: autorIndex
+    // },
+    // {
+    //     path:'/generos/create',
+    //     name: 'editoras.create',
+    //     component: autorForm
+    // },
+    // {
+    //     path:'/generos/:id/edit',
+    //     name: 'editoras.edit',
+    //     component: autorForm
+    // },
     {
         path:'/:pathMatch(.*)*',
         name:'notfound',
