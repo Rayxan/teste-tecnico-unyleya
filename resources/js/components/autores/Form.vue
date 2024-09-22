@@ -23,30 +23,24 @@
                     <input type="text" class="input" v-model="form.nome" >
                     <small style="color:red" v-if="errors.nome">{{ errors.nome }}</small>
 
-                    <p class="my-1">Ano Lancamento</p>
-                    <textarea cols="10" rows="5" class="textarea" v-model="form.ano_lancamento" ></textarea>
-                    <small style="color:red" v-if="errors.ano_lancamento">{{ errors.ano_lancamento }}</small>
+                    <p class="my-1">Ano Nascimento</p>
+                    <textarea cols="10" rows="5" class="input" v-model="form.ano_nascimento" ></textarea>
+                    <small style="color:red" v-if="errors.ano_nascimento">{{ errors.ano_nascimento }}</small>
                 </div>
 
             </div>
             <div class="livros__create__sidebar">
                 <div class="card py-2 px-2 bg-white">                    
                     <div class="my-3">
-                        <p>Autor</p>
-                        <input type="text" class="input" v-model="form.fk_autor" >
-                        <small style="color:red" v-if="errors.fk_autor">{{ errors.fk_autor }}</small>
+                        <p>Sexo</p>
+                        <input type="text" class="input" v-model="form.sexo" >
+                        <small style="color:red" v-if="errors.sexo">{{ errors.sexo }}</small>
                     </div>
                     <hr>
                     <div class="my-3">
-                        <p>Editora</p>
-                        <input type="text" class="input" v-model="form.fk_editora" >
-                        <small style="color:red" v-if="errors.fk_autor">{{ errors.fk_editora }}</small>
-                    </div>
-                    <hr>
-                    <div class="my-3">
-                        <p>Genero</p>
-                        <input type="text" class="input" v-model="form.fk_genero" >
-                        <small style="color:red" v-if="errors.fk_autor">{{ errors.fk_genero }}</small>
+                        <p>Nacionalidade</p>
+                        <input type="text" class="input" v-model="form.nacionalidade" >
+                        <small style="color:red" v-if="errors.fk_autor">{{ errors.nacionalidade }}</small>
                     </div>
                 </div>
             </div>

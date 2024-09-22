@@ -47,7 +47,7 @@ class AutorController extends Controller
         ], 200);
     }
 
-    public function update(StoreLivroRequest $request, $id)
+    public function update(StoreAutorRequest $request, $id)
     {
         $autor = Autor::find($id);
 
