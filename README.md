@@ -5,8 +5,6 @@ Este guia o ajudará a configurar e executar o projeto **teste-tecnico-unyleya**
 
 ## Requisitos
 
-Certifique-se de ter as seguintes dependências instaladas:
-
 - PHP: `^8.2`
 - Laravel: `^11.9`
 
