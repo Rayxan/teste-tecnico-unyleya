@@ -22,7 +22,7 @@ class StoreLivroRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'titulo' => 'required',
+            'titulo' => ['required', 'unique:livros,titulo'],
             'ano_lancamento' => 'required',
             'fk_autor' => 'required',
             'fk_editora' => 'required',
@@ -39,6 +39,7 @@ class StoreLivroRequest extends FormRequest
     {
         return [
             'titulo.required' => 'O campo Título é obrigatório.',
+            'titulo.unique' => 'Este titulo já está cadastrado no sistema.',
             'ano_lancamento.required' => 'O campo Ano Lançamento é obrigatório.',
             'fk_autor.required' => 'O campo Autor é obrigatório.',
             'fk_editora.required' => 'O campo Editora é obrigatório.',

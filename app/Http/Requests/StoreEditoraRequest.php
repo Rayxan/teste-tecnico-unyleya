@@ -22,7 +22,7 @@ class StoreEditoraRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nome' => 'required',
+            'nome' => ['required', 'unique:editoras,nome'],
         ];
     }
 
@@ -35,6 +35,7 @@ class StoreEditoraRequest extends FormRequest
     {
         return [
             'nome.required' => 'O campo Nome é obrigatório.',
+            'nome.unique' => 'Esta Editora já está cadastrada no sistema.',
         ];
     }
 }

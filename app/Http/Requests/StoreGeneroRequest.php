@@ -22,7 +22,7 @@ class StoreGeneroRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nome' => 'required',
+            'nome' => ['required','regex:/^[^\d]+$/', 'unique:generos,nome'],
         ];
     }
 
@@ -35,6 +35,8 @@ class StoreGeneroRequest extends FormRequest
     {
         return [
             'nome.required' => 'O campo Nome é obrigatório.',
+            'nome.unique' => 'Esta Gênero já está cadastrado no sistema.',
+            'nome.regex' => 'O campo Nome não pode conter números.',
         ];
     }
 }

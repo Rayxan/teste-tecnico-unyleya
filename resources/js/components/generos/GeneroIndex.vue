@@ -39,7 +39,7 @@
                         <p class="table--heading--col">Ações</p>
                     </div>
 
-                    <div class="table--items list_item" style="gap:175px" v-for="genero in generos" :key="genero.id" >
+                    <div class="table--items list_item" style="gap:183px" v-for="genero in generos" :key="genero.id" >
                         <p class="table--items--col">
                             {{genero.nome}}
                         </p>
