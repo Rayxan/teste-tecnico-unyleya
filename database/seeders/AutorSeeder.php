@@ -17,32 +17,32 @@ class AutorSeeder extends Seeder
             [
                 'nome' => 'Raylan', 
                 'ano_nascimento' => '2000-05-19', 
-                'sexo' => 'masculino',
-                'nacionalidade' => 'Brasileiro'
+                'sexo' => 'Masculino',
+                'nacionalidade' => 'Brazil'
             ],
             [
                 'nome' => 'J.R.R. Tolkien', 
                 'ano_nascimento' => '2024-09-23', 
-                'sexo' => 'masculino',
-                'nacionalidade' => 'Britânico'
+                'sexo' => 'Masculino',
+                'nacionalidade' => 'Brazil'
             ],
             [
                 'nome' => 'George R.R. Martin', 
                 'ano_nascimento' => '1980-04-21', 
-                'sexo' => 'masculino',
-                'nacionalidade' => 'Americano'
+                'sexo' => 'Masculino',
+                'nacionalidade' => 'Brazil'
             ],
             [
                 'nome' => 'J.K. Rowling', 
                 'ano_nascimento' => '2022-03-22', 
-                'sexo' => 'feminino',
-                'nacionalidade' => 'Britânica'
+                'sexo' => 'Feminino',
+                'nacionalidade' => 'Brazil'
             ],
             [
                 'nome' => 'Machado de Assis', 
                 'ano_nascimento' => '2024-09-23', 
-                'sexo' => 'masculino',
-                'nacionalidade' => 'Brasileiro'
+                'sexo' => 'Masculino',
+                'nacionalidade' => 'Brazil'
             ]
         ];
 
