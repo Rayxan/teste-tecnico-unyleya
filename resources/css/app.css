@@ -192,6 +192,10 @@ main h1 ~ p {
     color: #6a727a;
 }
 
+.generos__create__cardWrapper {
+    color: #6a727a;
+}
+
 .card {
     border: 1px solid #e0e0e0;
     -webkit-box-shadow: 0 6px 13px -12px rgb(50 50 93 / 20%), 0 3px 7px -3px rgb(110 110 110 / 10%);
