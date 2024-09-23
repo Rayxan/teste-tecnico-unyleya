@@ -17,7 +17,7 @@ return new class extends Migration
         Schema::create((new Autor())->getTable(), function (Blueprint $table): void {
             $table->id();
             $table->string('nome');
-            $table->integer('ano_nascimento');
+            $table->date('ano_nascimento');
             $table->string('sexo');
             $table->string('nacionalidade');
             $table->timestamps();

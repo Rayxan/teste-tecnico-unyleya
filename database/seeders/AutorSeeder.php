@@ -16,31 +16,31 @@ class AutorSeeder extends Seeder
         $autores = [
             [
                 'nome' => 'Raylan', 
-                'ano_nascimento' => '2000', 
+                'ano_nascimento' => '2000-05-19', 
                 'sexo' => 'masculino',
                 'nacionalidade' => 'Brasileiro'
             ],
             [
                 'nome' => 'J.R.R. Tolkien', 
-                'ano_nascimento' => '1892', 
+                'ano_nascimento' => '2024-09-23', 
                 'sexo' => 'masculino',
                 'nacionalidade' => 'Britânico'
             ],
             [
                 'nome' => 'George R.R. Martin', 
-                'ano_nascimento' => '1948', 
+                'ano_nascimento' => '1980-04-21', 
                 'sexo' => 'masculino',
                 'nacionalidade' => 'Americano'
             ],
             [
                 'nome' => 'J.K. Rowling', 
-                'ano_nascimento' => '1965', 
+                'ano_nascimento' => '2022-03-22', 
                 'sexo' => 'feminino',
                 'nacionalidade' => 'Britânica'
             ],
             [
                 'nome' => 'Machado de Assis', 
-                'ano_nascimento' => '1839', 
+                'ano_nascimento' => '2024-09-23', 
                 'sexo' => 'masculino',
                 'nacionalidade' => 'Brasileiro'
             ]

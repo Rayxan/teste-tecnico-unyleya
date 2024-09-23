@@ -20,7 +20,7 @@ return new class extends Migration
         Schema::create((new Livro())->getTable(), function (Blueprint $table): void {
             $table->id();
             $table->string('titulo');
-            $table->string('ano_lancamento');
+            $table->date('ano_lancamento');
             $table->unsignedBigInteger('fk_autor');
             $table->unsignedBigInteger('fk_editora');
             $table->unsignedBigInteger('fk_genero');
