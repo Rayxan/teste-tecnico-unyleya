@@ -4,7 +4,7 @@ import livroIndex from '../components/livros/LivroIndex.vue'
 import livroForm from '../components/livros/LivroForm.vue'
 import autorIndex from '../components/autores/AutorIndex.vue'
 import autorForm from '../components/autores/AutorForm.vue'
-// import editoraIndex from '../components/editoras/EditoraIndex.vue'
+import editoraIndex from '../components/editoras/EditoraIndex.vue'
 // import editoraForm from '../components/editoras/EditoraForm.vue'
 // import generoIndex from '../components/generos/GeneroIndex.vue'
 // import generoForm from '../components/generos/GeneroForm.vue'
@@ -42,11 +42,11 @@ const routes = [
         name: 'autores.edit',
         component: autorForm
     },
-    // {
-    //     path:'/editoras',
-    //     name: 'editoras.index',
-    //     component: autorIndex
-    // },
+    {
+        path:'/editoras',
+        name: 'editoras.index',
+        component: editoraIndex
+    },
     // {
     //     path:'/editoras/create',
     //     name: 'editoras.create',
