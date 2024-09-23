@@ -44,7 +44,12 @@
                     <hr>
                     <div class="my-3">
                         <p>Editora</p>
-                        <input type="text" class="input" v-model="form.fk_editora" >
+                        <select v-model="form.fk_editora" class="input">
+                            <option disabled value="">Selecione uma editora</option>
+                            <option v-for="editora in editoras" :key="editora.id" :value="editora.id">
+                                {{ editora.nome }}
+                            </option>
+                        </select>
                         <small style="color:red" v-if="errors.fk_autor">{{ errors.fk_editora }}</small>
                     </div>
                     <hr>
@@ -70,6 +75,7 @@
         form,
         errors,
         autores,
+        editoras,
         editMode,
         handleSave
     } = useLivroForm();

@@ -12,6 +12,7 @@ export function useLivroForm() {
     });
 
     const autores = ref([]);
+    const editoras = ref([]);
 
     const router = useRouter();
     const route = useRoute();
@@ -25,6 +26,7 @@ export function useLivroForm() {
             getLivro();
         }
         getAutores(); 
+        getEditoras(); 
     });
 
     const getLivro = async () => {
@@ -39,6 +41,11 @@ export function useLivroForm() {
     const getAutores = async () => {
         let response = await axios.get('/autores/list');
         autores.value = response.data.autores;
+    };
+
+    const getEditoras = async () => {
+        let response = await axios.get('/editoras/list');
+        editoras.value = response.data.editoras;
     };
 
     const handleSave = (values, actions) => {
@@ -78,6 +85,7 @@ export function useLivroForm() {
     return {
         form,
         autores,
+        editoras,
         errors,
         editMode,
         handleSave,
