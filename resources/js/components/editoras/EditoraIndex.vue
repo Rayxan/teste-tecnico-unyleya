@@ -39,7 +39,7 @@
                         <p class="table--heading--col">Ações</p>
                     </div>
 
-                    <div class="table--items livros__list__item" style="gap:136px" v-for="editora in editoras" :key="editora.id" >
+                    <div class="table--items livros__list__item" style="gap:176px" v-for="editora in editoras" :key="editora.id" >
                         <p class="table--items--col">
                             {{editora.nome}}
                         </p>
