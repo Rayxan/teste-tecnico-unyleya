@@ -55,7 +55,12 @@
                     <hr>
                     <div class="my-3">
                         <p>Genero</p>
-                        <input type="text" class="input" v-model="form.fk_genero" >
+                        <select v-model="form.fk_genero" class="input">
+                            <option disabled value="">Selecione um genero</option>
+                            <option v-for="genero in generos" :key="genero.id" :value="genero.id">
+                                {{ genero.nome }}
+                            </option>
+                        </select>
                         <small style="color:red" v-if="errors.fk_autor">{{ errors.fk_genero }}</small>
                     </div>
                 </div>
@@ -76,6 +81,7 @@
         errors,
         autores,
         editoras,
+        generos,
         editMode,
         handleSave
     } = useLivroForm();
