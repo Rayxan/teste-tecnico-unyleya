@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreAutorRequest;
+use App\Http\Requests\UpdateAutorRequest;
 use App\Models\Autor;
 use Illuminate\Http\Request;
 
@@ -54,7 +55,7 @@ class AutorController extends Controller
         ], 200);
     }
 
-    public function update(StoreAutorRequest $request, $id)
+    public function update(UpdateAutorRequest $request, $id)
     {
         $autor = Autor::find($id);
 

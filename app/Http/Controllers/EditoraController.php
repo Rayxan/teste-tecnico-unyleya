@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreEditoraRequest;
+use App\Http\Requests\UpdateEditoraRequest;
 use App\Models\Editora;
 use Illuminate\Http\Request;
 
@@ -51,7 +52,7 @@ class EditoraController extends Controller
         ], 200);
     }
 
-    public function update(StoreEditoraRequest $request, $id)
+    public function update(UpdateEditoraRequest $request, $id)
     {
         $editora = Editora::find($id);
 

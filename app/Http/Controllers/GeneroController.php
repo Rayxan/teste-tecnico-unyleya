@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreGeneroRequest;
+use App\Http\Requests\UpdateGeneroRequest;
 use App\Models\Genero;
 use Illuminate\Http\Request;
 
@@ -51,7 +52,7 @@ class GeneroController extends Controller
         ], 200);
     }
 
-    public function update(StoreGeneroRequest $request, $id)
+    public function update(UpdateGeneroRequest $request, $id)
     {
         $genero = Genero::find($id);
 

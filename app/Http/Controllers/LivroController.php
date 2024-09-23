@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreLivroRequest;
+use App\Http\Requests\UpdateLivroRequest;
 use App\Models\Livro;
 use Illuminate\Http\Request;
 
@@ -45,7 +46,7 @@ class LivroController extends Controller
         ], 200);
     }
 
-    public function update(StoreLivroRequest $request, $id)
+    public function update(UpdateLivroRequest $request, $id)
     {
         $livro = Livro::find($id);
 
