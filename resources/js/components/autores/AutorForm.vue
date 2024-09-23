@@ -37,7 +37,6 @@
                             <option value="Masculino">Masculino</option>
                             <option value="Feminino">Feminino</option>
                             <option value="Outro">Outro</option>
-                            <option value="Prefiro não informar">Prefiro não informar</option>
                         </select>
                         <small style="color:red" v-if="errors.sexo">{{ errors.sexo }}</small>
                     </div>
