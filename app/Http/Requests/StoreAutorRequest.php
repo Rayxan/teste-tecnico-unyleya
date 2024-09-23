@@ -22,7 +22,7 @@ class StoreAutorRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nome' => 'required',
+            'nome' => ['required', 'regex:/^[^\d]+$/'],
             'ano_nascimento' => 'required',
             'sexo' => 'required',
             'nacionalidade' => 'required',
@@ -38,6 +38,7 @@ class StoreAutorRequest extends FormRequest
     {
         return [
             'nome.required' => 'O campo Nome é obrigatório.',
+            'nome.regex' => 'O campo Nome não pode conter números.',
             'ano_nascimento.required' => 'O campo Ano Nascimento é obrigatório.',
             'sexo.required' => 'O campo Sexo é obrigatório.',
             'nacionalidade.required' => 'O campo Nacionalidade é obrigatório.',
