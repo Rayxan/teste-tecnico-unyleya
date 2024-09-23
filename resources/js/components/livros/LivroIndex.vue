@@ -54,7 +54,7 @@
                             {{livro.titulo}}
                         </p>
                         <p class="table--items--col">
-                            {{livro.ano_lancamento}}
+                            {{formatarData(livro.ano_lancamento)}}
                         </p>
                         <p class="table--items--col">
                             {{livro.autores.nome}}
@@ -105,6 +105,7 @@
         changePage,
         onEdit,
         deleteLivro,
-        translateLabel
+        translateLabel,
+        formatarData
     } = useLivros();
 </script>

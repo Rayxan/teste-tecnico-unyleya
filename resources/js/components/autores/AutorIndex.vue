@@ -51,7 +51,7 @@
                             {{autor.nome}}
                         </p>
                         <p class="table--items--col">
-                            {{autor.ano_nascimento}}
+                            {{formatarData(autor.ano_nascimento)}}
                         </p>
                         <p class="table--items--col">
                             {{autor.sexo}}
@@ -100,6 +100,7 @@
         changePage,
         onEdit,
         deleteAutor,
-        translateLabel
+        translateLabel,
+        formatarData
     } = useAutores();
 </script>

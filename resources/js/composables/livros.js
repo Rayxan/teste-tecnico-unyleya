@@ -2,6 +2,7 @@ import { ref, onMounted, watch } from "vue";
 import { useRouter } from "vue-router";
 import axios from "axios";
 import Swal from "sweetalert2";
+import dayjs from 'dayjs';
 
 export function useLivros() {
     const router = useRouter();
@@ -72,6 +73,10 @@ export function useLivros() {
         return label;
     };
 
+    const formatarData = (dataISO) => {
+        return dayjs(dataISO).format('DD/MM/YYYY');
+    };
+
     return {
         livros,
         links,
@@ -81,6 +86,7 @@ export function useLivros() {
         changePage,
         onEdit,
         deleteLivro,
-        translateLabel
+        translateLabel,
+        formatarData
     };
 }
