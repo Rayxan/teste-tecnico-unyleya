@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreEditoraRequest;
 use App\Models\Editora;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,7 @@ class EditoraController extends Controller
             'editoras' => $editoras
         ], 200);
     }
-
+    
     public function listEditoras(Request $request)
     {
         $editoras = Editora::query();
@@ -37,9 +38,6 @@ class EditoraController extends Controller
         $editora = new Editora();
 
         $editora->nome = $request->nome;
-        $editora->ano_nascimento = $request->ano_nascimento;
-        $editora->sexo = $request->sexo;
-        $editora->nacionalidade = $request->nacionalidade;
 
         $editora->save();
     }
@@ -58,9 +56,6 @@ class EditoraController extends Controller
         $editora = Editora::find($id);
 
         $editora->nome = $request->nome;
-        $editora->ano_nascimento = $request->ano_nascimento;
-        $editora->sexo = $request->sexo;
-        $editora->nacionalidade = $request->nacionalidade;
 
         $editora->save();
     }

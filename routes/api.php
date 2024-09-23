@@ -28,7 +28,7 @@ Route::get('/editoras', [EditoraController::class, 'index']);
 Route::get('/editoras/list', [EditoraController::class, 'listEditores']);
 Route::get('/editoras/{editor}/edit', [EditoraController::class, 'edit']);
 Route::put('/editoras/update/{editor}', [EditoraController::class, 'update']);
-Route::delete('/editor/{editor}', [EditoraController::class, 'destroy']);
+Route::delete('/editora/{editora}', [EditoraController::class, 'destroy']);
 
 // Route::post('/generos', [GeneroController::class, 'store']);
 // Route::get('/generos', [GeneroController::class, 'index']);

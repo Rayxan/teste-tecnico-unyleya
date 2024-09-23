@@ -23,9 +23,6 @@ class StoreEditoraRequest extends FormRequest
     {
         return [
             'nome' => 'required',
-            'ano_nascimento' => 'required',
-            'sexo' => 'required',
-            'nacionalidade' => 'required',
         ];
     }
 
@@ -38,9 +35,6 @@ class StoreEditoraRequest extends FormRequest
     {
         return [
             'nome.required' => 'O campo Nome é obrigatório.',
-            'ano_nascimento.required' => 'O campo Ano Nascimento é obrigatório.',
-            'sexo.required' => 'O campo Sexo é obrigatório.',
-            'nacionalidade.required' => 'O campo Nacionalidade é obrigatório.',
         ];
     }
 }
