@@ -33,35 +33,38 @@
                 <div class="card py-2 px-2 bg-white">                    
                     <div class="my-3">
                         <p>Autor</p>
-                        <select v-model="form.fk_autor" class="input">
-                            <option disabled value="">Selecione um autor</option>
-                            <option v-for="autor in autores" :key="autor.id" :value="autor.id">
-                                {{ autor.nome }}
-                            </option>
-                        </select>
+                        <v-select
+                        v-model="form.fk_autor"
+                        :options="autores"
+                        label="nome"
+                        :reduce="autor => autor.id"
+                        placeholder="Selecione um autor"
+                        />
                         <small style="color:red" v-if="errors.fk_autor">{{ errors.fk_autor }}</small>
                     </div>
                     <hr>
                     <div class="my-3">
                         <p>Editora</p>
-                        <select v-model="form.fk_editora" class="input">
-                            <option disabled value="">Selecione uma editora</option>
-                            <option v-for="editora in editoras" :key="editora.id" :value="editora.id">
-                                {{ editora.nome }}
-                            </option>
-                        </select>
-                        <small style="color:red" v-if="errors.fk_autor">{{ errors.fk_editora }}</small>
+                        <v-select
+                        v-model="form.fk_editora"
+                        :options="editoras"
+                        label="nome"
+                        :reduce="editora => editora.id"
+                        placeholder="Selecione uma editora"
+                        />
+                        <small style="color:red" v-if="errors.fk_editora">{{ errors.fk_editora }}</small>
                     </div>
                     <hr>
                     <div class="my-3">
                         <p>Gênero</p>
-                        <select v-model="form.fk_genero" class="input">
-                            <option disabled value="">Selecione um genero</option>
-                            <option v-for="genero in generos" :key="genero.id" :value="genero.id">
-                                {{ genero.nome }}
-                            </option>
-                        </select>
-                        <small style="color:red" v-if="errors.fk_autor">{{ errors.fk_genero }}</small>
+                        <v-select
+                        v-model="form.fk_genero"
+                        :options="generos"
+                        label="nome"
+                        :reduce="genero => genero.id"
+                        placeholder="Selecione uma genero"
+                        />
+                        <small style="color:red" v-if="errors.fk_genero">{{ errors.fk_genero }}</small>
                     </div>
                 </div>
             </div>
@@ -75,6 +78,8 @@
 
 <script setup>
     import { useLivroForm } from "@/composables/livroForm";
+    import vSelect from 'vue-select';
+    import 'vue-select/dist/vue-select.css';
 
     const {
         form,
