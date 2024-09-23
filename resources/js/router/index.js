@@ -6,7 +6,7 @@ import autorIndex from '../components/autores/AutorIndex.vue'
 import autorForm from '../components/autores/AutorForm.vue'
 import editoraIndex from '../components/editoras/EditoraIndex.vue'
 import editoraForm from '../components/editoras/EditoraForm.vue'
-// import generoIndex from '../components/generos/GeneroIndex.vue'
+import generoIndex from '../components/generos/GeneroIndex.vue'
 // import generoForm from '../components/generos/GeneroForm.vue'
 
 import notFound from '../components/notFound.vue'
@@ -57,20 +57,20 @@ const routes = [
         name: 'editoras.edit',
         component: editoraForm
     },
-    // {
-    //     path:'/generos',
-    //     name: 'editoras.index',
-    //     component: autorIndex
-    // },
+    {
+        path:'/generos',
+        name: 'generos.index',
+        component: generoIndex
+    },
     // {
     //     path:'/generos/create',
-    //     name: 'editoras.create',
-    //     component: autorForm
+    //     name: 'generos.create',
+    //     component: generoForm
     // },
     // {
     //     path:'/generos/:id/edit',
-    //     name: 'editoras.edit',
-    //     component: autorForm
+    //     name: 'generos.edit',
+    //     component: generoForm
     // },
     {
         path:'/:pathMatch(.*)*',
