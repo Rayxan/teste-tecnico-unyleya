@@ -10,6 +10,8 @@ export function useAutorForm() {
         nacionalidade: "",
     });
 
+    const nacionalidades = ref([]);
+
     const router = useRouter();
     const route = useRoute();
     
@@ -21,7 +23,14 @@ export function useAutorForm() {
             editMode.value = true;
             getAutor();
         }
+        getNacionalidades(); 
     });
+
+    const getNacionalidades = async () => {
+        let response = await axios.get('/nacionalidades/list');
+        console.log(response.data.nacionalidades);
+        nacionalidades.value = response.data.nacionalidades;
+    };
 
     const getAutor = async () => {
         let response = await axios.get(`/autores/${route.params.id}/edit`);
@@ -67,6 +76,7 @@ export function useAutorForm() {
 
     return {
         form,
+        nacionalidades,
         errors,
         editMode,
         handleSave,

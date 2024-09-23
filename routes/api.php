@@ -4,6 +4,7 @@ use App\Http\Controllers\AutorController;
 use App\Http\Controllers\EditoraController;
 use App\Http\Controllers\GeneroController;
 use App\Http\Controllers\LivroController;
+use App\Http\Controllers\NacionalidadeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -37,3 +38,5 @@ Route::get('/generos/list', [GeneroController::class, 'listGeneros']);
 Route::get('/generos/{genero}/edit', [GeneroController::class, 'edit']);
 Route::put('/generos/update/{genero}', [GeneroController::class, 'update']);
 Route::delete('/genero/{genero}', [GeneroController::class, 'destroy']);
+
+Route::get('/nacionalidades/list', [NacionalidadeController::class, 'listNacionalidades']);

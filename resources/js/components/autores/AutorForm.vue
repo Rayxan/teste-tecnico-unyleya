@@ -43,7 +43,13 @@
                     </div>
                     <div class="my-3">
                         <p>Nacionalidade</p>
-                        <input type="text" class="input" v-model="form.nacionalidade" >
+                        <v-select
+                        v-model="form.nacionalidade"
+                        :options="nacionalidades"
+                        label="name"
+                        :reduce="nacionalidade => nacionalidade.name"
+                        placeholder="Selecione uma nacionalidade"
+                        />
                         <small style="color:red" v-if="errors.nacionalidade">{{ errors.nacionalidade }}</small>
                     </div>
                 </div>
@@ -58,9 +64,12 @@
 
 <script setup>
     import { useAutorForm } from "@/composables/autorForm";
+    import vSelect from 'vue-select';
+    import 'vue-select/dist/vue-select.css';
 
     const {
         form,
+        nacionalidades,
         errors,
         editMode,
         handleSave
