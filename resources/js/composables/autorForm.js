@@ -51,7 +51,7 @@ export function useAutorForm() {
     const createAutor = (values, actions) => {
         axios.post('/autores', form)
         .then((response) => {
-            router.push('/')
+            router.push('/autores')
             toast.fire({ icon: "success", title: "Autor adicionado com sucesso"})
         })
         .catch((error) => {
@@ -64,7 +64,7 @@ export function useAutorForm() {
     const updateAutor = (values, actions) => {
         axios.put(`/autores/update/${route.params.id}`, form)
         .then((response) => {
-            router.push('/')
+            router.push('/autores')
             toast.fire({ icon: "success", title: "Autor atualizado com sucesso"})
         })
         .catch((error) => {

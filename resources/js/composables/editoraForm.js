@@ -42,7 +42,7 @@ export function useEditoraForm() {
     const createEditora = (values, actions) => {
         axios.post('/editoras', form)
         .then((response) => {
-            router.push('/')
+            router.push('/editoras')
             toast.fire({ icon: "success", title: "Editora adicionado com sucesso"})
         })
         .catch((error) => {
@@ -55,7 +55,7 @@ export function useEditoraForm() {
     const updateEditora = (values, actions) => {
         axios.put(`/editoras/update/${route.params.id}`, form)
         .then((response) => {
-            router.push('/')
+            router.push('/editoras')
             toast.fire({ icon: "success", title: "Editora atualizado com sucesso"})
         })
         .catch((error) => {

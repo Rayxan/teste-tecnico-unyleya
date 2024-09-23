@@ -42,7 +42,7 @@ export function useGeneroForm() {
     const createGenero = (values, actions) => {
         axios.post('/generos', form)
         .then((response) => {
-            router.push('/')
+            router.push('/generos')
             toast.fire({ icon: "success", title: "Genero adicionado com sucesso"})
         })
         .catch((error) => {
@@ -55,7 +55,7 @@ export function useGeneroForm() {
     const updateGenero = (values, actions) => {
         axios.put(`/generos/update/${route.params.id}`, form)
         .then((response) => {
-            router.push('/')
+            router.push('/generos')
             toast.fire({ icon: "success", title: "Genero atualizado com sucesso"})
         })
         .catch((error) => {
