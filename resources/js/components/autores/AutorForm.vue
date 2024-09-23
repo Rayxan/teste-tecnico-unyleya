@@ -32,7 +32,13 @@
                 <div class="card py-2 px-2 bg-white">                    
                     <div class="my-3">
                         <p>Sexo</p>
-                        <input type="text" class="input" v-model="form.sexo" >
+                        <select v-model="form.sexo" class="input">
+                            <option disabled value="">Selecione o sexo</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Outro">Outro</option>
+                            <option value="Prefiro não informar">Prefiro não informar</option>
+                        </select>
                         <small style="color:red" v-if="errors.sexo">{{ errors.sexo }}</small>
                     </div>
                     <div class="my-3">

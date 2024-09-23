@@ -62,7 +62,7 @@
                         :options="generos"
                         label="nome"
                         :reduce="genero => genero.id"
-                        placeholder="Selecione uma genero"
+                        placeholder="Selecione um gênero"
                         />
                         <small style="color:red" v-if="errors.fk_genero">{{ errors.fk_genero }}</small>
                     </div>
