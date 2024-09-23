@@ -54,7 +54,7 @@
                     </div>
                     <hr>
                     <div class="my-3">
-                        <p>Genero</p>
+                        <p>Gênero</p>
                         <select v-model="form.fk_genero" class="input">
                             <option disabled value="">Selecione um genero</option>
                             <option v-for="genero in generos" :key="genero.id" :value="genero.id">

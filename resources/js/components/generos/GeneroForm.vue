@@ -6,7 +6,7 @@
                 <h1 class="my-1">
                     <span v-if="editMode">Editar</span> 
                     <span v-else="editMode">Adicionar</span> 
-                    Genero</h1>
+                    Gênero</h1>
             </div>
             <div class="livros__create__titlebar--item">
                 

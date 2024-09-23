@@ -14,18 +14,18 @@
                         
                     <div class="customers__titlebar dflex justify-content-between align-items-center">
                         <div class="customers__titlebar--item">
-                            <h1 class="my-1">Generos</h1>
+                            <h1 class="my-1">Gêneros</h1>
                         </div>
                         <div class="customers__titlebar--item">
                             <button @click="newGeneros" class="btn btn-secondary my-1" >
-                                Adicionar Genero
+                                Adicionar Gênero
                             </button>
                         </div>
                     </div>
                     <div class="table-search">
                         <div>
                             <button class="search-select">
-                                Pesquisar Genero
+                                Pesquisar Gênero
                             </button>
                         </div>
                         <div class="relative">
@@ -34,7 +34,7 @@
                     </div>
                     <div class="table--heading mt-2 livros__list__heading " style="padding-top: 20px;background:#FFF">
                         <p class="table--heading--col">
-                            Genero
+                            Gênero
                         </p>
                         <p class="table--heading--col">Ações</p>
                     </div>

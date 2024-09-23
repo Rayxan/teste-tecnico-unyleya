@@ -15,7 +15,7 @@
                     <router-link class="nav-link" to="/editoras">Editoras</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link class="nav-link" to="/generos">Genero</router-link>
+                    <router-link class="nav-link" to="/generos">Gêneros</router-link>
                 </li>
             </ul>
         </div>
