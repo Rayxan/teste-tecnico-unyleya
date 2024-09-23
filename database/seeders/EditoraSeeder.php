@@ -15,7 +15,9 @@ class EditoraSeeder extends Seeder
     {
         $editoras = [
             ['nome' => 'Leya'],
-            ['nome' => 'HarperCollins'],
+            ['nome' => 'Harper'],
+            ['nome' => 'Unyleya'],
+            ['nome' => 'Marvel'],
             ['nome' => 'Rocco'],
             ['nome' => 'Penguin Random House'],
             ['nome' => 'Companhia das Letras'],

@@ -22,11 +22,8 @@
                     <p class="mb-1">Nome</p>
                     <input type="text" class="input" v-model="form.nome" >
                     <small style="color:red" v-if="errors.nome">{{ errors.nome }}</small>
-
                     <p class="my-1">Ano Nascimento</p>
-                    <!-- <textarea cols="10" rows="5" class="input" v-model="form.ano_nascimento" ></textarea> -->
                     <input type="date" class="input" v-model="form.ano_nascimento" />
-
                     <small style="color:red" v-if="errors.ano_nascimento">{{ errors.ano_nascimento }}</small>
                 </div>
 
