@@ -6,7 +6,7 @@ Este guia o ajudará a configurar e executar o projeto **teste-tecnico-unyleya**
 ## Requisitos
 
 - PHP: `^8.2`
-- Laravel: `^11.9`
+- Node.js: `^20.15.0`
 
 ## Passo a Passo da Instalação
 
@@ -81,10 +81,5 @@ Finalmente, rode o servidor local com o comando:
 php artisan serve
 ```
 
-A aplicação estará disponível no endereço padrão:
-
-```
-http://localhost:8000
-```
-
----
+A aplicação estará disponível no endereço exibido após usar o comando acima.
+> **Nota**: Caso não esteja disponível no endereço padrão (http://localhost:8000), acesse o endereço que foi gerado após usar o comando acima. 
