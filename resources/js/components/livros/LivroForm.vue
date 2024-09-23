@@ -23,8 +23,8 @@
                     <input type="text" class="input" v-model="form.titulo" >
                     <small style="color:red" v-if="errors.titulo">{{ errors.titulo }}</small>
 
-                    <p class="my-1">Ano Lancamento</p>
-                    <textarea cols="10" rows="5" class="textarea" v-model="form.ano_lancamento" ></textarea>
+                    <p class="my-1">Ano Lançamento</p>
+                    <input type="date" class="input" v-model="form.ano_lancamento" />
                     <small style="color:red" v-if="errors.ano_lancamento">{{ errors.ano_lancamento }}</small>
                 </div>
 

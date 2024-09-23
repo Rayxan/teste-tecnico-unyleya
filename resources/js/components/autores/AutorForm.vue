@@ -6,7 +6,7 @@
                 <h1 class="my-1">
                     <span v-if="editMode">Editar</span> 
                     <span v-else="editMode">Adicionar</span> 
-                    Livro</h1>
+                    Autor</h1>
             </div>
             <div class="livros__create__titlebar--item">
                 
@@ -24,7 +24,9 @@
                     <small style="color:red" v-if="errors.nome">{{ errors.nome }}</small>
 
                     <p class="my-1">Ano Nascimento</p>
-                    <textarea cols="10" rows="5" class="input" v-model="form.ano_nascimento" ></textarea>
+                    <!-- <textarea cols="10" rows="5" class="input" v-model="form.ano_nascimento" ></textarea> -->
+                    <input type="date" class="input" v-model="form.ano_nascimento" />
+
                     <small style="color:red" v-if="errors.ano_nascimento">{{ errors.ano_nascimento }}</small>
                 </div>
 
@@ -36,11 +38,10 @@
                         <input type="text" class="input" v-model="form.sexo" >
                         <small style="color:red" v-if="errors.sexo">{{ errors.sexo }}</small>
                     </div>
-                    <hr>
                     <div class="my-3">
                         <p>Nacionalidade</p>
                         <input type="text" class="input" v-model="form.nacionalidade" >
-                        <small style="color:red" v-if="errors.fk_autor">{{ errors.nacionalidade }}</small>
+                        <small style="color:red" v-if="errors.nacionalidade">{{ errors.nacionalidade }}</small>
                     </div>
                 </div>
             </div>
