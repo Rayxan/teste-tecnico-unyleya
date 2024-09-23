@@ -76,7 +76,7 @@ main h1 ~ p {
     background-color: #f1f1f1;
 }
 
-.livros__list__heading {
+.list_heading {
     -ms-grid-columns: 80px 1fr 140px 120px 100px;
     grid-template-columns: 50px 1fr 120px 120px 120px;
 }
@@ -105,7 +105,7 @@ main h1 ~ p {
     padding-left: 15px
 }
 
-.livros__list__item {
+.list_item {
     border-bottom: 1px solid #e0e0e0;
     -ms-grid-columns: 80px 1fr 140px 120px 100px;
     grid-template-columns: 50px 1fr 120px 120px 120px;
@@ -179,7 +179,7 @@ main h1 ~ p {
     margin-bottom: 30px;
 }
 
-.livros__create__cardWrapper {
+.create_cardWrapper {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr minmax(auto, 290px);
@@ -244,14 +244,6 @@ main h1 ~ p {
     margin-top: 30px;
 }
 
-.livros__create__main--pricing--col {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-}
-
 .inputAdd {
     padding: 9px 15px;
     border-top: 1px solid #e0e0e0;
@@ -284,13 +276,6 @@ main h1 ~ p {
     color: #454f5b;
     min-width: 200px;
 }
-
-.livros__create__main--media--form {
-    border: 2px dashed #6a727a;
-    position: relative;
-    cursor: pointer;
-}
-
 
 .list-unstyled {
     list-style: none;

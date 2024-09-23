@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <div class="livros__create__cardWrapper mt-2">
+        <div class="create_cardWrapper mt-2">
             <div class="livros__create__main">
                 <div class="livros__create__main--addInfo card py-2 px-2 bg-white">
                     <p class="mb-1">Título</p>

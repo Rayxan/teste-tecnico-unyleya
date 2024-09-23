@@ -32,14 +32,14 @@
                             <input class="search-input" type="text" name="search" placeholde="Seach genero..." v-model="searchQuery">
                         </div>
                     </div>
-                    <div class="table--heading mt-2 livros__list__heading " style="padding-top: 20px;background:#FFF">
+                    <div class="table--heading mt-2 list_heading " style="padding-top: 20px;background:#FFF">
                         <p class="table--heading--col">
                             Gênero
                         </p>
                         <p class="table--heading--col">Ações</p>
                     </div>
 
-                    <div class="table--items livros__list__item" style="gap:175px" v-for="genero in generos" :key="genero.id" >
+                    <div class="table--items list_item" style="gap:175px" v-for="genero in generos" :key="genero.id" >
                         <p class="table--items--col">
                             {{genero.nome}}
                         </p>

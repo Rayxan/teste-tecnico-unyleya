@@ -32,7 +32,7 @@
                             <input class="search-input" type="text" name="search" placeholde="Seach livro..." v-model="searchQuery">
                         </div>
                     </div>
-                    <div class="table--heading mt-2 livros__list__heading " style="padding-top: 20px;background:#FFF">
+                    <div class="table--heading mt-2 list_heading " style="padding-top: 20px;background:#FFF">
                         <p class="table--heading--col">
                             Livro
                         </p>
@@ -49,7 +49,7 @@
                         <p class="table--heading--col actions">Ações</p>
                     </div>
 
-                    <div class="table--items livros__list__item" v-for="livro in livros" :key="livro.id" >
+                    <div class="table--items list_item" v-for="livro in livros" :key="livro.id" >
                         <p class="table--items--col">
                             {{livro.titulo}}
                         </p>

@@ -32,7 +32,7 @@
                             <input class="search-input" type="text" name="search" placeholde="Seach autor..." v-model="searchQuery">
                         </div>
                     </div>
-                    <div class="table--heading mt-2 livros__list__heading " style="padding-top: 20px;background:#FFF">
+                    <div class="table--heading mt-2 list_heading " style="padding-top: 20px;background:#FFF">
                         <p class="table--heading--col">
                             Autor
                         </p>
@@ -46,7 +46,7 @@
                         <p class="table--heading--col actions">Ações</p>
                     </div>
 
-                    <div class="table--items livros__list__item" v-for="autor in autores" :key="autor.id" >
+                    <div class="table--items list_item" v-for="autor in autores" :key="autor.id" >
                         <p class="table--items--col">
                             {{autor.nome}}
                         </p>
